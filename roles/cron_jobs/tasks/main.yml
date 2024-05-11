@@ -1,0 +1,9 @@
+---
+- name: set up daily cronjob
+  cron:
+    name: "daily backup"
+    user: "anakinskywalker"
+    job: 'bash /home/anakinskywalker/backup.sh'
+    minute: "0"
+    hour: "2"
+    day: "*"
